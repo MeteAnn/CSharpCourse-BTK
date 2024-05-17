@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualMethod", "VirtualMet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClasses", "AbstractClasses\AbstractClasses.csproj", "{8DD78CB1-762C-4CCF-A712-DD1A6F5FA573}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecapDemo2", "RecapDemo2\RecapDemo2.csproj", "{16C76F48-6179-4881-8BAB-882A2914477F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{8DD78CB1-762C-4CCF-A712-DD1A6F5FA573}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD78CB1-762C-4CCF-A712-DD1A6F5FA573}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD78CB1-762C-4CCF-A712-DD1A6F5FA573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C76F48-6179-4881-8BAB-882A2914477F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C76F48-6179-4881-8BAB-882A2914477F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C76F48-6179-4881-8BAB-882A2914477F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C76F48-6179-4881-8BAB-882A2914477F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
