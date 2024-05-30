@@ -10,7 +10,7 @@ namespace AdoNetDemo
 {
     public class ProductDal
     {
-        SqlConnection _connection = new SqlConnection(@"Server=(localdb)\\mssqllocaldb;initial catalog=ETrade;integrated security=true");
+        SqlConnection _connection = new SqlConnection(@"Server=(localdb)\mssqllocaldb;initial catalog=ETrade;integrated security=true");
         public List<Product> GetAll2()
         {
 
@@ -74,12 +74,15 @@ namespace AdoNetDemo
         }
        
 
+
+       
+
         public void Add(Product product)
         {
 
             ConnectionControl();
 
-            SqlCommand command = new SqlCommand("Insert into products values(@name, @unitPrice, @StockAmount)",_connection);
+            SqlCommand command = new SqlCommand("Insert into Products values(@name, @unitPrice, @StockAmount)",_connection);
 
             command.Parameters.AddWithValue("@name",product.Name);
 
@@ -87,10 +90,37 @@ namespace AdoNetDemo
 
             command.Parameters.AddWithValue("@stockamount", product.StockAmount);
 
+            
+
             command.ExecuteNonQuery();
             _connection.Close();
 
         }
+
+        public void Update(Product product)
+        {
+
+            ConnectionControl();
+
+            SqlCommand command = new SqlCommand("update Products Set Name=@Name, UnitPrice=@UnitPrice, StockAmount=@StockAmount where Id=@id)", _connection);
+
+            command.Parameters.AddWithValue("@name", product.Name);
+
+            command.Parameters.AddWithValue("@unitprice", product.UnitPrice);
+
+            command.Parameters.AddWithValue("@stockamount", product.StockAmount);
+
+            command.Parameters.AddWithValue("@id",product.Id);
+
+
+
+            command.ExecuteNonQuery();
+            _connection.Close();
+
+        }
+
+
+
 
         public void ConnectionControl()
         {
