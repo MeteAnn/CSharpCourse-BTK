@@ -75,9 +75,56 @@ namespace AdoNetDemo
             MessageBox.Show("Added!");
         }
 
-        private void dgwProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dgwProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+
+            txtUpdateName.Text = dgwProducts.CurrentRow.Cells[1].Value.ToString();
+
+            txtUniUpdate.Text = dgwProducts.CurrentRow.Cells[2].Value.ToString();
+
+            txtStockUpdate.Text = dgwProducts.CurrentRow.Cells[3].Value.ToString();
+
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            Product product = new Product{
+
+                Id =Convert.ToInt32(dgwProducts.CurrentRow.Cells[0].Value),
+
+                Name = txtUpdateName.Text,
+
+                UnitPrice = Convert.ToInt32(txtUniUpdate.Text),
+
+                StockAmount = Convert.ToInt32(txtStockUpdate.Text)
+
+
+
+            };
+
+            _productDal1.Update(product);
+            LoadProducts();
+            MessageBox.Show("Update");
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+           int id = Convert.ToInt32(dgwProducts.CurrentRow.Cells[0].Value);
+
+            _productDal1.Remove(id);
+            LoadProducts();
+            MessageBox.Show("Deleted!");
+
+
+
         }
     }
 }

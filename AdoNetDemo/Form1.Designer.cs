@@ -45,6 +45,7 @@
             this.lblStockUpdate = new System.Windows.Forms.Label();
             this.lblunitPriceUpdate = new System.Windows.Forms.Label();
             this.txtUniUpdate = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
             this.dbxAdd.SuspendLayout();
             this.gbxUpdate.SuspendLayout();
@@ -53,13 +54,13 @@
             // dgwProducts
             // 
             this.dgwProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProducts.Location = new System.Drawing.Point(12, 12);
+            this.dgwProducts.Location = new System.Drawing.Point(12, 66);
             this.dgwProducts.Name = "dgwProducts";
             this.dgwProducts.RowHeadersWidth = 51;
             this.dgwProducts.RowTemplate.Height = 24;
             this.dgwProducts.Size = new System.Drawing.Size(867, 188);
             this.dgwProducts.TabIndex = 0;
-            this.dgwProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellContentClick);
+            this.dgwProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
             // 
             // lblName
             // 
@@ -118,7 +119,7 @@
             this.dbxAdd.Controls.Add(this.lblStock);
             this.dbxAdd.Controls.Add(this.label2);
             this.dbxAdd.Controls.Add(this.tbxunitPrice);
-            this.dbxAdd.Location = new System.Drawing.Point(21, 244);
+            this.dbxAdd.Location = new System.Drawing.Point(16, 279);
             this.dbxAdd.Name = "dbxAdd";
             this.dbxAdd.Size = new System.Drawing.Size(419, 194);
             this.dbxAdd.TabIndex = 7;
@@ -144,7 +145,7 @@
             this.gbxUpdate.Controls.Add(this.lblStockUpdate);
             this.gbxUpdate.Controls.Add(this.lblunitPriceUpdate);
             this.gbxUpdate.Controls.Add(this.txtUniUpdate);
-            this.gbxUpdate.Location = new System.Drawing.Point(460, 259);
+            this.gbxUpdate.Location = new System.Drawing.Point(455, 279);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(419, 194);
             this.gbxUpdate.TabIndex = 8;
@@ -159,6 +160,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblNameUpdate
             // 
@@ -208,11 +210,22 @@
             this.txtUniUpdate.Size = new System.Drawing.Size(100, 22);
             this.txtUniUpdate.TabIndex = 4;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(709, 12);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(165, 48);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 467);
+            this.ClientSize = new System.Drawing.Size(886, 485);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.dbxAdd);
             this.Controls.Add(this.dgwProducts);
@@ -247,6 +260,7 @@
         private System.Windows.Forms.Label lblStockUpdate;
         private System.Windows.Forms.Label lblunitPriceUpdate;
         private System.Windows.Forms.TextBox txtUniUpdate;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
