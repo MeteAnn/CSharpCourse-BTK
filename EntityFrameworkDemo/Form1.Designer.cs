@@ -53,12 +53,13 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(664, -5);
+            this.btnDelete.Location = new System.Drawing.Point(709, 12);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(165, 48);
+            this.btnDelete.Size = new System.Drawing.Size(165, 31);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button1
             // 
@@ -68,6 +69,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblNameUpdate
             // 
@@ -119,7 +121,7 @@
             this.gbxUpdate.Controls.Add(this.lblStockUpdate);
             this.gbxUpdate.Controls.Add(this.lblunitPriceUpdate);
             this.gbxUpdate.Controls.Add(this.txtUniUpdate);
-            this.gbxUpdate.Location = new System.Drawing.Point(410, 262);
+            this.gbxUpdate.Location = new System.Drawing.Point(455, 262);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(419, 194);
             this.gbxUpdate.TabIndex = 12;
@@ -141,6 +143,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dbxAdd
             // 
@@ -151,7 +154,7 @@
             this.dbxAdd.Controls.Add(this.lblStock);
             this.dbxAdd.Controls.Add(this.label2);
             this.dbxAdd.Controls.Add(this.tbxunitPrice);
-            this.dbxAdd.Location = new System.Drawing.Point(-29, 262);
+            this.dbxAdd.Location = new System.Drawing.Point(16, 262);
             this.dbxAdd.Name = "dbxAdd";
             this.dbxAdd.Size = new System.Drawing.Size(419, 194);
             this.dbxAdd.TabIndex = 11;
@@ -209,18 +212,19 @@
             // dgwProducts
             // 
             this.dgwProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProducts.Location = new System.Drawing.Point(-33, 49);
+            this.dgwProducts.Location = new System.Drawing.Point(12, 49);
             this.dgwProducts.Name = "dgwProducts";
             this.dgwProducts.RowHeadersWidth = 51;
             this.dgwProducts.RowTemplate.Height = 24;
             this.dgwProducts.Size = new System.Drawing.Size(867, 188);
             this.dgwProducts.TabIndex = 10;
+            this.dgwProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 459);
+            this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.dbxAdd);
