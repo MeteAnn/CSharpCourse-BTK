@@ -126,5 +126,10 @@ namespace AdoNetDemo
 
 
         }
+
+        private void dgwProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
