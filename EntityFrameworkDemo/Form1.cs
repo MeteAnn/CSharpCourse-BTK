@@ -39,6 +39,18 @@ namespace EntityFrameworkDemo
             }
         }
 
+        private void SearchProducts(string key)
+        {
+
+
+            //var result = _productDal.GetAll().Where(p=>p.Name.ToLower().Contains(key.ToLower())).ToList();
+
+
+            var result = _productDal.GetByName(key);
+            
+            dgwProducts.DataSource = result;
+
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,6 +75,9 @@ namespace EntityFrameworkDemo
         }
 
         ProductDal _productDal = new ProductDal();
+
+       
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
@@ -115,6 +130,21 @@ namespace EntityFrameworkDemo
             MessageBox.Show("Deleted");
 
 
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+            SearchProducts(tbxSearch.Text);
+
+
+        }
+
+        private void tbxGetById_Click(object sender, EventArgs e)
+        {
+            _productDal.GetById(10);
         }
     }
 }
