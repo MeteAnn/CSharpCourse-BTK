@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrnekAdo2Cmd-Rdr", "OrnekAd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{8B012C83-0431-4D3B-AF36-B99942D027D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attributes", "Attributes\Attributes.csproj", "{8337BADB-EF32-49D4-ACFA-57A77F6407F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{8B012C83-0431-4D3B-AF36-B99942D027D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B012C83-0431-4D3B-AF36-B99942D027D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B012C83-0431-4D3B-AF36-B99942D027D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8337BADB-EF32-49D4-ACFA-57A77F6407F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8337BADB-EF32-49D4-ACFA-57A77F6407F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8337BADB-EF32-49D4-ACFA-57A77F6407F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8337BADB-EF32-49D4-ACFA-57A77F6407F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
