@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Delegates
@@ -19,50 +20,84 @@ namespace Delegates
         static void Main(string[] args)
         {
 
-            CustomerManager customerManager = new CustomerManager();
-            //customerManager.SendMessage();
-            //customerManager.ShowAlert();
+            //CustomerManager customerManager = new CustomerManager();
+            ////customerManager.SendMessage();
+            ////customerManager.ShowAlert();
 
 
-            MyDelegate myDelegate = customerManager.SendMessage;
+            //MyDelegate myDelegate = customerManager.SendMessage;
 
 
-            myDelegate += customerManager.ShowAlert;
+            //myDelegate += customerManager.ShowAlert;
 
 
 
-            myDelegate -= customerManager.SendMessage;
+            //myDelegate -= customerManager.SendMessage;
 
 
-            MyDelegate2 myDelegate2 = customerManager.SendMessage2;
+            //MyDelegate2 myDelegate2 = customerManager.SendMessage2;
 
-            myDelegate2 += customerManager.ShowAlert2;
-
-
-        
-
-            Matematik matematik = new Matematik();
+            //myDelegate2 += customerManager.ShowAlert2;
 
 
-            MyDelegate3 myDelegate3 = matematik.Topla;
-
-            
-
-            myDelegate3 += matematik.Carp;
-
-            var sonuc = myDelegate3(1, 2);
-
-            myDelegate2("Hello");
-
-            myDelegate();
 
 
+            //Matematik matematik = new Matematik();
+
+
+            //MyDelegate3 myDelegate3 = matematik.Topla;
+
+
+
+            //myDelegate3 += matematik.Carp;
+
+            //var sonuc = myDelegate3(1, 2);
+
+            //myDelegate2("Hello");
+
+            //myDelegate();
+
+            Func<int, int, int> add = Topla;
+
+
+
+            Func<int> getRandomNumber = delegate ()
+            {
+
+
+                Random random = new Random();
+
+                return random.Next(1,100);
+
+
+            };
+
+           
+
+            Func<int> getRandomNumber2 = () => new Random().Next(1,100);
+
+            Console.WriteLine(getRandomNumber());
+            Thread.Sleep(1000);
+            Console.WriteLine(getRandomNumber2());
+
+            //Console.WriteLine(Topla(2,3));
 
 
             Console.ReadLine();
 
 
         }
+
+
+        static int Topla(int x, int y)
+        {
+
+
+            return x + y;
+
+
+        }
+
 
 
         public class CustomerManager
